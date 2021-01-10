@@ -6,11 +6,11 @@ This project is designed to be a template for spinning off new React-Redux appli
 
 [ ] Change name in `package.json`
 
-[ ] Generate new fav icon at [favicon.io](https://favicon.io)
-
-[ ] Change root location in `nginx.conf` and in `Dockerfile`
+[ ] Generate new fav icon at [favicon.io](https://favicon.io) and place it in ./public/
 
 [ ] Change title in `manifest.json` and in `index.html`
+
+[ ] Delete the .git folder and reinitalize the repository
 
 ## Photos
 
@@ -65,4 +65,3 @@ Run `npm run eject` to remove the `react-scripts` dependency and replace it with
 [CRA: HTTPS](https://create-react-app.dev/docs/using-https-in-development/)
 
 [CRA: Advanced Config](https://create-react-app.dev/docs/advanced-configuration/)
-
