@@ -1,5 +1,4 @@
-#Build App
-FROM node:current-alpine AS build-stage
+FROM node:13.12.0-alpine
 
 WORKDIR /app
 
@@ -7,14 +6,8 @@ COPY . ./
 
 RUN npm install
 RUN npm run build
-
-#Run server
-FROM nginx:latest
-
-COPY --from=build-stage /app/build /var/dev/react-template/build
-
-COPY --from=build-stage /app/nginx.conf /etc/nginx/nginx.conf
+RUN npm install -g serve
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["serve", "--no-clipboard","-s", "/app/build", "-l", "80"]
